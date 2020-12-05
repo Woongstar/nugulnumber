@@ -1,6 +1,7 @@
 # -*-coding:utf-8-*-
 from flask import Flask, request, json
 from datetime import datetime
+import random
 import os
 
 app = Flask(__name__)
@@ -53,9 +54,11 @@ def createItems():
 @app.route('/nugulnumber/Sum_action', methods=['POST'])
 def sumStartAction():
     response = commonResponse
-
-    response['output']['num1'] = '1'
-    response['output']['num2'] = '2'
+    number1 = random.randrange(1, 5)
+    number2 = random.randrange(1, 5)
+    
+    response['output']['num1'] = 'number1'
+    response['output']['num2'] = 'number2'
     response['output']['answer'] = '3'
 
     print(response)
