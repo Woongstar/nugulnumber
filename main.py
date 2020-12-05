@@ -56,9 +56,9 @@ def sumStartAction():
     response = commonResponse
     number1 = random.randrange(1, 5)
     number2 = random.randrange(1, 5)
-    
-    response['output']['num1'] = 'number1'
-    response['output']['num2'] = 'number2'
+
+    response['output']['num1'] = number1
+    response['output']['num2'] = number2
     response['output']['answer'] = '3'
 
     print(response)
