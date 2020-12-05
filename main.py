@@ -50,7 +50,7 @@ def createItems():
     return json.dumps(response)
 
 
-@app.route('/sumStartAction', methods=['POST'])
+@app.route('/nugulnumber/Sum_action', methods=['POST'])
 def sumStartAction():
     response = commonResponse
 
