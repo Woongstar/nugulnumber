@@ -31,22 +31,16 @@ def index():
     return 'Hello Flask'
 
 
-@app.route('/createItems', methods=['POST'])
-def createItems():
-    utteranceParameter = getUtteranceParameter()
-    utteranceValue = utteranceParameter['items']['value']
-
+@app.route('/nugulnumber/plusGame2', methods=['POST'])
+def plusGame2():
     response = commonResponse
+    plus2_num1 = random.randrange(1, 10)
+    plus2_num2 = random.randrange(1, 10)
+    plus2_answer = plus2_num1 + plus2_num2
+    response['output']['plus2_num1'] = plus2_num1
+    response['output']['plus2_num2'] = plus2_num2
+    response['output']['plus2_answer'] = plus2_answer
 
-    response['output']['existYn'] = 'N'
-
-    for i in shoppingItems:
-        if i[0] == utteranceValue:
-            response['output']['existYn'] = 'Y'
-            response['output']['registerDate'] = i[1]
-
-    if response['output']['existYn'] == 'N':
-        shoppingItems.append([utteranceValue, datetime.today().strftime('%Y-%m-%d')])
     print(response)
     return json.dumps(response)
 
@@ -63,6 +57,7 @@ def sumStartAction():
 
     print(response)
     return json.dumps(response)
+
 
 
 if __name__ == '__main__':
