@@ -59,6 +59,19 @@ def sumStartAction():
     return json.dumps(response)
 
 
+@app.route('/nugulnumber/multipleGame', methods=['POST'])
+def multiple():
+    response = commonResponse
+    multiplenumber1 = random.randint(1, 10)
+    multiplenumber2 = random.randint(1, 10)
+    multipleanswer = multiplenumber1 * multiplenumber2
+    response['output']['multiplenumber1'] = multiplenumber1
+    response['output']['multiplenumber2'] = multiplenumber2
+    response['output']['multipleanswer'] = multipleanswer
+
+    print(response)
+    return json.dumps(response)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5500, debug=True)
