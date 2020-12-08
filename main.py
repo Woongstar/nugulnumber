@@ -99,7 +99,7 @@ def plusGame4():
 @app.route('/nugulnumber/multi1', methods=['POST'])
 def multi1():
     response = commonResponse
-    multi1num1 = random.randrange(1, 6)
+    multi1num1 = random.randrange(1, 4)
     multi1num2 = random.randrange(1, 4)
     multi1num3 = random.randrange(1, 4)
     multi1num4 = random.randrange(1, 4)
@@ -172,6 +172,66 @@ def multi3():
     response['output']['multi3ans1'] = multi3ans1
     response['output']['multi3ans2'] = multi3ans2
     response['output']['multi3ans3'] = multi3ans3
+
+    print(response)
+    return json.dumps(response)
+
+
+@app.route('/nugulnumber/challenge1', methods=['POST'])
+def challenge1():
+    response = commonResponse
+    chal1num1 = random.randrange(1, 4)
+    chal1num2 = random.randrange(1, 4)
+    chal1num3 = random.randrange(1, 4)
+    chal1num4 = random.randrange(1, 4)
+    chal1num5 = random.randrange(1, 10)
+    chal1num6 = random.randrange(1, 10)
+    chal1num7 = random.randrange(5, 10)
+    chal1num8 = random.randrange(5, 10)
+    chal1num9 = random.randrange(5, 25)
+    chal1num10 = random.randrange(5, 25)
+    chal1num11 = random.randrange(5, 25)
+    chal1num12 = random.randrange(5, 30)
+    chal1num13 = random.randrange(5, 30)
+    chal1num14 = random.randrange(16, 30)
+    chal1num15 = random.randrange(16, 30)
+    chal1num16 = random.randrange(10, 16)
+    chal1ans1 = chal1num1 + chal1num2
+    chal1ans2 = chal1num3 + chal1num4
+    chal1ans3 = chal1num7 - chal1num2
+    chal1ans4 = chal1num1 + chal1num5
+    chal1ans5 = chal1num8 - chal1num3
+    chal1ans6 = chal1num9 + chal1num6
+    chal1ans7 = chal1num10 - chal1num4
+    chal1ans8 = chal1num12 + chal1num13
+    chal1ans9 = chal1num10 + chal1num3
+    chal1ans10 = chal1num15 - chal1num16
+    response['output']['chal1num1'] = chal1num1
+    response['output']['chal1num2'] = chal1num2
+    response['output']['chal1num3'] = chal1num3
+    response['output']['chal1num4'] = chal1num4
+    response['output']['chal1num5'] = chal1num5
+    response['output']['chal1num6'] = chal1num6
+    response['output']['chal1num7'] = chal1num7
+    response['output']['chal1num8'] = chal1num8
+    response['output']['chal1num9'] = chal1num9
+    response['output']['chal1num10'] = chal1num10
+    response['output']['chal1num11'] = chal1num11
+    response['output']['chal1num12'] = chal1num12
+    response['output']['chal1num13'] = chal1num13
+    response['output']['chal1num14'] = chal1num14
+    response['output']['chal1num15'] = chal1num15
+    response['output']['chal1num16'] = chal1num16
+    response['output']['chal1ans1'] = chal1ans1
+    response['output']['chal1ans2'] = chal1ans2
+    response['output']['chal1ans3'] = chal1ans3
+    response['output']['chal1ans4'] = chal1ans4
+    response['output']['chal1ans5'] = chal1ans5
+    response['output']['chal1ans6'] = chal1ans6
+    response['output']['chal1ans7'] = chal1ans7
+    response['output']['chal1ans8'] = chal1ans8
+    response['output']['chal1ans9'] = chal1ans9
+    response['output']['chal1ans10'] = chal1ans10
 
     print(response)
     return json.dumps(response)
