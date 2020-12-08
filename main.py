@@ -99,7 +99,7 @@ def plusGame4():
 @app.route('/nugulnumber/multi1', methods=['POST'])
 def multi1():
     response = commonResponse
-    multi1num1 = random.(1, 6)
+    multi1num1 = random.randrange(1, 6)
     multi1num2 = random.randrange(1, 4)
     multi1num3 = random.randrange(1, 4)
     multi1num4 = random.randrange(1, 4)
