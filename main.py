@@ -44,7 +44,7 @@ def plusGame2():
     return json.dumps(response)
 
 
-@app.route('/nugulnumber/plusGame3', methods=['POST'])
+@app.route('/nugulnumber/plusGame3', methoxds=['POST'])
 def plusGame3():
     response = commonResponse
     plus3num1 = random.randrange(4, 15)
@@ -96,15 +96,82 @@ def plusGame4():
     return json.dumps(response)
 
 
-@app.route('/nugulnumber/multipleGame', methods=['POST'])
-def multiple():
+@app.route('/nugulnumber/multi1', methods=['POST'])
+def multi1():
     response = commonResponse
-    multiplenumber1 = random.randint(1, 10)
-    multiplenumber2 = random.randint(1, 10)
-    multipleanswer = multiplenumber1 * multiplenumber2
-    response['output']['multiplenumber1'] = multiplenumber1
-    response['output']['multiplenumber2'] = multiplenumber2
-    response['output']['multipleanswer'] = multipleanswer
+    multi1num1 = random.randint(1, 6)
+    multi1num2 = random.randint(1, 6)
+    multi1num3 = random.randint(1, 6)
+    multi1num4 = random.randint(1, 6)
+    multi1num5 = random.randint(1, 6)
+    multi1num6 = random.randint(1, 6)
+    multi1ans1 = multi1num1 * multi1num2
+    multi1ans2 = multi1num3 * multi1num4
+    multi1ans3 = multi1num5 * multi1num6
+
+    response['output']['multi1num1'] = multi1num1
+    response['output']['multi1num2'] = multi1num2
+    response['output']['multi1num3'] = multi1num3
+    response['output']['multi1num4'] = multi1num4
+    response['output']['multi1num5'] = multi1num5
+    response['output']['multi1num6'] = multi1num6
+    response['output']['multi1ans1'] = multi1ans1
+    response['output']['multi1ans2'] = multi1ans2
+    response['output']['multi1ans3'] = multi1ans3
+
+    print(response)
+    return json.dumps(response)
+
+
+@app.route('/nugulnumber/multi2', methods=['POST'])
+def multi2():
+    response = commonResponse
+    multi2num1 = random.randint(1, 6)
+    multi2num2 = random.randint(1, 6)
+    multi2num3 = random.randint(1, 6)
+    multi2num4 = random.randint(1, 6)
+    multi2num5 = random.randint(1, 6)
+    multi2num6 = random.randint(1, 6)
+    multi2ans1 = multi2num1 * multi2num2
+    multi2ans2 = multi2num3 * multi2num4
+    multi2ans3 = multi2num5 * multi2num6
+
+    response['output']['multi2num1'] = multi2num1
+    response['output']['multi2num2'] = multi2num2
+    response['output']['multi2num3'] = multi2num3
+    response['output']['multi2num4'] = multi2num4
+    response['output']['multi2num5'] = multi2num5
+    response['output']['multi2num6'] = multi2num6
+    response['output']['multi2ans1'] = multi2ans1
+    response['output']['multi2ans2'] = multi2ans2
+    response['output']['multi2ans3'] = multi2ans3
+
+    print(response)
+    return json.dumps(response)
+
+
+@app.route('/nugulnumber/multi3', methods=['POST'])
+def multi3():
+    response = commonResponse
+    multi3num1 = random.randint(1, 6)
+    multi3num2 = random.randint(1, 6)
+    multi3num3 = random.randint(1, 6)
+    multi3num4 = random.randint(1, 6)
+    multi3num5 = random.randint(1, 6)
+    multi3num6 = random.randint(1, 6)
+    multi3ans1 = multi3num1 * multi3num2
+    multi3ans2 = multi3num3 * multi3num4
+    multi3ans3 = multi3num5 * multi3num6
+
+    response['output']['multi3num1'] = multi3num1
+    response['output']['multi3num2'] = multi3num2
+    response['output']['multi3num3'] = multi3num3
+    response['output']['multi3num4'] = multi3num4
+    response['output']['multi3num5'] = multi3num5
+    response['output']['multi3num6'] = multi3num6
+    response['output']['multi3ans1'] = multi3ans1
+    response['output']['multi3ans2'] = multi3ans2
+    response['output']['multi3ans3'] = multi3ans3
 
     print(response)
     return json.dumps(response)
