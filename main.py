@@ -13,15 +13,6 @@ commonResponse = {
 }
 
 
-
-
-def getUtteranceParameter():
-    data = request.get_json()
-    print('data')
-    print(data)
-    return data['action']['parameters']
-
-
 @app.route('/')
 def index():
     return 'Hello Flask'
