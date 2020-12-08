@@ -19,7 +19,7 @@ def index():
 
 
 @app.route('/nugulnumber/numberbaseball', methods=['POST'])
-def plusGame2():
+def plusGamebaseball():
     response = commonResponse
     plus2_num1 = random.randrange(1, 10)
     plus2_num2 = random.randrange(1, 10)
