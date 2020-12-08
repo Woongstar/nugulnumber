@@ -26,27 +26,6 @@ def getUtteranceParameter():
 def index():
     return 'Hello Flask'
 
-@app.route('/nugulnumber/numberbaseball', methods=['POST'])
-def createItems():
-
-    utteranceParameter = getUtteranceParameter()
-    utteranceValue = utteranceParameter['baseballanswer']['value']
-    print(utteranceValue)
-
-    response = commonResponse
-
-    response['output']['existYn'] = 'N' 
-
-    for i in shoppingItems :
-        if i[0] == utteranceValue :
-            response['output']['existYn'] = 'Y'
-            response['output']['registerDate'] = i[1]
-
-    if response['output']['existYn'] == 'N':
-         shoppingItems.append([utteranceValue, datetime.today().strftime('%Y-%m-%d')])
-    print(response)
-    return json.dumps(response)
-
 
 @app.route('/nugulnumber/numberbaseball', methods=['POST'])
 def plusGame2():
