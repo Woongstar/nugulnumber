@@ -12,11 +12,7 @@ commonResponse = {
     'output': {}
 }
 
-shoppingItems = [
-    ['간장', '2020-09-20'],
-    ['설탕', '2020-09-27'],
-    ['토마토', '2020-10-10'],
-]
+
 
 
 def getUtteranceParameter():
@@ -29,6 +25,41 @@ def getUtteranceParameter():
 @app.route('/')
 def index():
     return 'Hello Flask'
+
+@app.route('/nugulnumber/numberbaseball', methods=['POST'])
+def createItems():
+
+    utteranceParameter = getUtteranceParameter()
+    utteranceValue = utteranceParameter['baseballanswer']['value']
+    print(utteranceValue)
+
+    response = commonResponse
+
+    response['output']['existYn'] = 'N' 
+
+    for i in shoppingItems :
+        if i[0] == utteranceValue :
+            response['output']['existYn'] = 'Y'
+            response['output']['registerDate'] = i[1]
+
+    if response['output']['existYn'] == 'N':
+         shoppingItems.append([utteranceValue, datetime.today().strftime('%Y-%m-%d')])
+    print(response)
+    return json.dumps(response)
+
+
+@app.route('/nugulnumber/numberbaseball', methods=['POST'])
+def plusGame2():
+    response = commonResponse
+    plus2_num1 = random.randrange(1, 10)
+    plus2_num2 = random.randrange(1, 10)
+    plus2_answer = plus2_num1 + plus2_num2
+    response['output']['plus2_num1'] = plus2_num1
+    response['output']['plus2_num2'] = plus2_num2
+    response['output']['plus2_answer'] = plus2_answer
+
+    print(response)
+    return json.dumps(response)
 
 
 @app.route('/nugulnumber/plusGame2', methods=['POST'])
@@ -45,15 +76,27 @@ def plusGame2():
     return json.dumps(response)
 
 
-@app.route('/nugulnumber/Sum_action', methods=['POST'])
-def sumStartAction():
+@app.route('/nugulnumber/plusGame3', methods=['POST'])
+def plusGame3():
     response = commonResponse
-    number1 = random.randrange(1, 5)
-    number2 = random.randrange(1, 5)
-    answer = number1 + number2
-    response['output']['num1'] = number1
-    response['output']['num2'] = number2
-    response['output']['answer'] = answer
+    plus3num1 = random.randrange(10, 20)
+    plus3num2 = random.randrange(10, 20)
+    plus3num3 = random.randrange(10, 20)
+    plus3num4 = random.randrange(10, 20)
+    plus3num5 = random.randrange(10, 20)
+    plus3num6 = random.randrange(10, 20)
+    plus3answer1 = plus3num1 + plus3num2
+    plus3answer2 = plus3num3 + plus3num4
+    plus3answer3 = plus3num5 + plus3num6
+    response['output']['plus3num1'] = plus3num1
+    response['output']['plus3num2'] = plus3num2
+    response['output']['plus3num3'] = plus3num3
+    response['output']['plus3num4'] = plus3num4
+    response['output']['plus3num5'] = plus3num5
+    response['output']['plus3num6'] = plus3num6
+    response['output']['plus3answer1'] = plus3answer1
+    response['output']['plus3answer2'] = plus3answer2
+    response['output']['plus3answer3'] = plus3answer3
 
     print(response)
     return json.dumps(response)
