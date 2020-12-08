@@ -44,7 +44,7 @@ def plusGame2():
     return json.dumps(response)
 
 
-@app.route('/nugulnumber/plusGame3', methoxds=['POST'])
+@app.route('/nugulnumber/plusGame3', methods=['POST'])
 def plusGame3():
     response = commonResponse
     plus3num1 = random.randrange(4, 15)
