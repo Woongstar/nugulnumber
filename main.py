@@ -99,12 +99,12 @@ def plusGame4():
 @app.route('/nugulnumber/multi1', methods=['POST'])
 def multi1():
     response = commonResponse
-    multi1num1 = random.randint(1, 6)
-    multi1num2 = random.randint(1, 6)
-    multi1num3 = random.randint(1, 6)
-    multi1num4 = random.randint(1, 6)
-    multi1num5 = random.randint(1, 6)
-    multi1num6 = random.randint(1, 6)
+    multi1num1 = random.(1, 6)
+    multi1num2 = random.randrange(1, 4)
+    multi1num3 = random.randrange(1, 4)
+    multi1num4 = random.randrange(1, 4)
+    multi1num5 = random.randrange(1, 4)
+    multi1num6 = random.randrange(1, 4)
     multi1ans1 = multi1num1 * multi1num2
     multi1ans2 = multi1num3 * multi1num4
     multi1ans3 = multi1num5 * multi1num6
@@ -126,12 +126,12 @@ def multi1():
 @app.route('/nugulnumber/multi2', methods=['POST'])
 def multi2():
     response = commonResponse
-    multi2num1 = random.randint(1, 6)
-    multi2num2 = random.randint(1, 6)
-    multi2num3 = random.randint(1, 6)
-    multi2num4 = random.randint(1, 6)
-    multi2num5 = random.randint(1, 6)
-    multi2num6 = random.randint(1, 6)
+    multi2num1 = random.randrange(2, 10)
+    multi2num2 = random.randrange(2, 10)
+    multi2num3 = random.randrange(2, 10)
+    multi2num4 = random.randrange(2, 10)
+    multi2num5 = random.randrange(2, 10)
+    multi2num6 = random.randrange(2, 10)
     multi2ans1 = multi2num1 * multi2num2
     multi2ans2 = multi2num3 * multi2num4
     multi2ans3 = multi2num5 * multi2num6
@@ -153,12 +153,12 @@ def multi2():
 @app.route('/nugulnumber/multi3', methods=['POST'])
 def multi3():
     response = commonResponse
-    multi3num1 = random.randint(1, 6)
-    multi3num2 = random.randint(1, 6)
-    multi3num3 = random.randint(1, 6)
-    multi3num4 = random.randint(1, 6)
-    multi3num5 = random.randint(1, 6)
-    multi3num6 = random.randint(1, 6)
+    multi3num1 = random.randrange(2, 13)
+    multi3num2 = random.randrange(2, 13)
+    multi3num3 = random.randrange(2, 13)
+    multi3num4 = random.randrange(2, 13)
+    multi3num5 = random.randrange(2, 13)
+    multi3num6 = random.randrange(2, 13)
     multi3ans1 = multi3num1 * multi3num2
     multi3ans2 = multi3num3 * multi3num4
     multi3ans3 = multi3num5 * multi3num6
