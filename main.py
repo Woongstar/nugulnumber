@@ -18,29 +18,27 @@ def index():
     return 'Hello Flask'
 
 
-@app.route('/nugulnumber/numberbaseball', methods=['POST'])
-def plusGamebaseball():
-    response = commonResponse
-    plus2_num1 = random.randrange(1, 10)
-    plus2_num2 = random.randrange(1, 10)
-    plus2_answer = plus2_num1 + plus2_num2
-    response['output']['plus2_num1'] = plus2_num1
-    response['output']['plus2_num2'] = plus2_num2
-    response['output']['plus2_answer'] = plus2_answer
-
-    print(response)
-    return json.dumps(response)
-
-
 @app.route('/nugulnumber/plusGame2', methods=['POST'])
 def plusGame2():
     response = commonResponse
-    plus2_num1 = random.randrange(1, 10)
-    plus2_num2 = random.randrange(1, 10)
-    plus2_answer = plus2_num1 + plus2_num2
-    response['output']['plus2_num1'] = plus2_num1
-    response['output']['plus2_num2'] = plus2_num2
-    response['output']['plus2_answer'] = plus2_answer
+    plus2num1 = random.randrange(1, 6)
+    plus2num2 = random.randrange(1, 6)
+    plus2num3 = random.randrange(1, 6)
+    plus2num4 = random.randrange(1, 6)
+    plus2num5 = random.randrange(1, 6)
+    plus2num6 = random.randrange(1, 6)
+    plus2answer1 = plus2num1 + plus2num2
+    plus2answer2 = plus2num3 + plus2num4
+    plus2answer3 = plus2num5 + plus2num6
+    response['output']['plus2num1'] = plus2num1
+    response['output']['plus2num2'] = plus2num2
+    response['output']['plus2num3'] = plus2num3
+    response['output']['plus2num4'] = plus2num4
+    response['output']['plus2num5'] = plus2num5
+    response['output']['plus2num6'] = plus2num6
+    response['output']['plus2answer1'] = plus2answer1
+    response['output']['plus2answer2'] = plus2answer2
+    response['output']['plus2answer3'] = plus2answer3
 
     print(response)
     return json.dumps(response)
@@ -49,12 +47,12 @@ def plusGame2():
 @app.route('/nugulnumber/plusGame3', methods=['POST'])
 def plusGame3():
     response = commonResponse
-    plus3num1 = random.randrange(10, 20)
-    plus3num2 = random.randrange(10, 20)
-    plus3num3 = random.randrange(10, 20)
-    plus3num4 = random.randrange(10, 20)
-    plus3num5 = random.randrange(10, 20)
-    plus3num6 = random.randrange(10, 20)
+    plus3num1 = random.randrange(4, 15)
+    plus3num2 = random.randrange(4, 15)
+    plus3num3 = random.randrange(4, 15)
+    plus3num4 = random.randrange(4, 15)
+    plus3num5 = random.randrange(4, 15)
+    plus3num6 = random.randrange(4, 15)
     plus3answer1 = plus3num1 + plus3num2
     plus3answer2 = plus3num3 + plus3num4
     plus3answer3 = plus3num5 + plus3num6
@@ -67,6 +65,32 @@ def plusGame3():
     response['output']['plus3answer1'] = plus3answer1
     response['output']['plus3answer2'] = plus3answer2
     response['output']['plus3answer3'] = plus3answer3
+
+    print(response)
+    return json.dumps(response)
+
+
+@app.route('/nugulnumber/plusGame4', methods=['POST'])
+def plusGame4():
+    response = commonResponse
+    plus4num1 = random.randrange(10, 30)
+    plus4num2 = random.randrange(10, 30)
+    plus4num3 = random.randrange(10, 30)
+    plus4num4 = random.randrange(10, 30)
+    plus4num5 = random.randrange(10, 30)
+    plus4num6 = random.randrange(10, 30)
+    plus4answer1 = plus4num1 + plus4num2
+    plus4answer2 = plus4num3 + plus4num4
+    plus4answer3 = plus4num5 + plus4num6
+    response['output']['plus4num1'] = plus4num1
+    response['output']['plus4num2'] = plus4num2
+    response['output']['plus4num3'] = plus4num3
+    response['output']['plus4num4'] = plus4num4
+    response['output']['plus4num5'] = plus4num5
+    response['output']['plus4num6'] = plus4num6
+    response['output']['plus4answer1'] = plus4answer1
+    response['output']['plus4answer2'] = plus4answer2
+    response['output']['plus4answer3'] = plus4answer3
 
     print(response)
     return json.dumps(response)
