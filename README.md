@@ -3,5 +3,6 @@
 ### 음성기반 AI (NUGU)로 하는 숫자놀이 
 
 * AWS EC2 를 이용한 서버생성
-* Flask를 이용해 숫자놀이 RestApi 통신
-* NUGU DEVELOPER을 이용해서 서비스 제작 및 배포
+* Flask를 이용한 RestApi 통신
+* NUGU DEVELOPER로 개발 백앤드 서버 통신
+
