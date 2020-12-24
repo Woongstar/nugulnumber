@@ -11,7 +11,7 @@
 * 누구랑 숫자놀이
 * SKT NUGU 음성인식을 기반으로한 어린아이들을 위한 두뇌훈련 숫자놀이
 * 상세 PPT참고
-* SKT사장상/최우수상 수상
+* SKT사장상/최우수상 수상(2020/12/21)
 
 ![NUGU랑숫자놀이시연](https://user-images.githubusercontent.com/69667560/102508236-855c7d00-40c8-11eb-9e44-26fb7a9520fd.PNG)
 ![NUGU랑숫자놀이](https://user-images.githubusercontent.com/69667560/102508261-8b525e00-40c8-11eb-8f92-3eae64b5293c.PNG)
