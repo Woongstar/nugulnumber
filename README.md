@@ -1,4 +1,4 @@
-# nugulnumber
+# Nugu랑 숫자놀이
 ## SKT와 함께하는 AI인재양성 사업
 ### 음성기반 AI (NUGU)로 하는 숫자놀이 
 
